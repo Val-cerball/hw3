@@ -12,6 +12,91 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // 🔥 YOUR CODE GOES HERE 🔥
   // Write the recipe (algorithm) in the comments. Then, write the code.
-  
+
+// Store the 3 categories of high-level Passenger information in memory: 1.Passenger Details, 2.Pickup location and 3.Drop-off location. 
+
+let info1 = ride.passengerDetails ; 
+let info2 = ride.pickupLocation ; 
+let info3 = ride.dropoffLocation 
+
+// Store all details of each high-level passenger information category in memory.
+
+let PassengerFirstName = info1.first;
+let PassengerLastName = info1.last;
+let PassengerNumber = info1.phoneNumber; 
+let PickupAddress = info2.address;
+let PickupCity = info2.city;
+let PickupState = info2.state;
+let PickupZip = info2.zip
+let DropoffAddress = info3.address;
+let DropoffCity = info3.city;
+let DropoffState = info3.state;
+let DropoffZip = info3.zip
+
+// Store information about rides in memory: 4. number of passenger travelling and 5.luxury level of service requested "purple request'' 
+
+let info4 = ride.numberOfPassengers; 
+let info5 = ride.purpleRequested;
+
+// Write Passenger's information and ride details out to the console in a human-readable format. 
+// If  the rider has requested the luxury "Purple" level of service, display "Noober Purple" no matter the numberOfPassengers in the ride. 
+
+ if (info5 == true) {
+
+  console.log(`Noober Purple Passenger:`, `${PassengerFirstName}`, 
+  `${PassengerLastName}`, 
+  `-`, 
+  `${PassengerNumber}.`, 
+  `Pick-up at:`, 
+  `${PickupAddress},`,
+  `${PickupCity},`,
+  `${PickupState}`,
+  `${PickupZip}.`, 
+  `Drop-off at:`,
+  `${DropoffAddress},`, 
+  `${DropoffCity},`, 
+  `${DropoffState}`, 
+  `${DropoffZip}.`)
+
+ // If the rider has not requested Noober Purple but the numberOfPassengers in a single ride request is greater than 3, display "Noober XL" as the level of service.
+
+} else if (info5 == false && info4 > 3) {
+
+  console.log (`Noober XL Passenger:`, `${PassengerFirstName}`, 
+  `${PassengerLastName}`, 
+  `-`, 
+  `${PassengerNumber}.`, 
+  `Pick-up at:`, 
+  `${PickupAddress},`,
+  `${PickupCity},`,
+  `${PickupState}`,
+  `${PickupZip}.`, 
+  `Drop-off at:`,
+  `${DropoffAddress},`, 
+  `${DropoffCity},`, 
+  `${DropoffState}`, 
+  `${DropoffZip}.`)
+
+// Anything else is the normal level of service and should display "Noober X"
+
+} else {
+
+  console.log (`Noober X Passenger:`, `${PassengerFirstName}`, 
+  `${PassengerLastName}`, 
+  `-`, 
+  `${PassengerNumber}.`, 
+  `Pick-up at:`, 
+  `${PickupAddress},`,
+  `${PickupCity},`,
+  `${PickupState}`,
+  `${PickupZip}.`, 
+  `Drop-off at:`,
+  `${DropoffAddress},`, 
+  `${DropoffCity},`, 
+  `${DropoffState}`, 
+  `${DropoffZip}.`)
+}
+
+
   // 🔥 YOUR CODE ENDS HERE 🔥
 })
