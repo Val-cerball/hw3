@@ -13,13 +13,15 @@ document.addEventListener('DOMContentLoaded', async function() {
   // 🔥 YOUR CODE GOES HERE 🔥
   // Write the recipe (algorithm) in the comments. Then, write the code.
 
-// Store the 3 categories of high-level Passenger information in memory: 1.Passenger Details, 2.Pickup location and 3.Drop-off location. 
+// Store the 5 main categories of Passenger and Ride information in memory: 1.Passenger Details, 2.Pickup location , 3.Drop-off location, 4. number of passenger travelling and 5.luxury level of service requested "purple request"
 
-let info1 = ride.passengerDetails ; 
-let info2 = ride.pickupLocation ; 
-let info3 = ride.dropoffLocation 
+let info1 = ride.passengerDetails; 
+let info2 = ride.pickupLocation; 
+let info3 = ride.dropoffLocation;
+let info4 = ride.numberOfPassengers; 
+let info5 = ride.purpleRequested;
 
-// Store all details of each high-level passenger information category in memory.
+// Store the sub-categories of passenger's ride in memory:
 
 let PassengerFirstName = info1.first;
 let PassengerLastName = info1.last;
@@ -31,14 +33,10 @@ let PickupZip = info2.zip
 let DropoffAddress = info3.address;
 let DropoffCity = info3.city;
 let DropoffState = info3.state;
-let DropoffZip = info3.zip
-
-// Store information about rides in memory: 4. number of passenger travelling and 5.luxury level of service requested "purple request'' 
-
-let info4 = ride.numberOfPassengers; 
-let info5 = ride.purpleRequested;
+let DropoffZip = info3.zip;
 
 // Write Passenger's information and ride details out to the console in a human-readable format. 
+
 // If  the rider has requested the luxury "Purple" level of service, display "Noober Purple" no matter the numberOfPassengers in the ride. 
 
  if (info5 == true) {
